@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tescik View Controller-->
+        <!--Sample View Controller-->
         <scene sceneID="Sf8-0k-iHG">
             <objects>
-                <viewController storyboardIdentifier="___FILEBASENAMEASIDENTIFIER___" id="6JY-wC-gpp" customClass="___FILEBASENAMEASIDENTIFIER___" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="___FILEBASENAMEASIDENTIFIER___" id="6JY-wC-gpp" customClass="___FILEBASENAMEASIDENTIFIER___" customModule="IPS_Monteur" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ywu-gT-m6t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
