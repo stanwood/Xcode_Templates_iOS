@@ -1,7 +1,7 @@
 //___FILEHEADER___
 
 
-protocol ___VARIABLE_productName___Actionable: class {
+protocol ___VARIABLE_productName___Actionable {
 
 }
 

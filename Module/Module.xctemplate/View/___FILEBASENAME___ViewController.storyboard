@@ -13,7 +13,7 @@
         <!--Sample View Controller-->
         <scene sceneID="Sf8-0k-iHG">
             <objects>
-                <viewController storyboardIdentifier="___FILEBASENAMEASIDENTIFIER___" id="6JY-wC-gpp" customClass="___FILEBASENAMEASIDENTIFIER___" customModule="IPS_Monteur" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="___FILEBASENAMEASIDENTIFIER___" id="6JY-wC-gpp" customClass="___FILEBASENAMEASIDENTIFIER___" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ywu-gT-m6t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
