@@ -2,7 +2,7 @@
 
 import UIKit
 
-class ___VARIABLE_productName___ViewController: AbstractViewController {
+class ___VARIABLE_productName___ViewController: UIViewController {
     var presenter: ___VARIABLE_productName___Presenter!
     
     override func viewDidLoad() {

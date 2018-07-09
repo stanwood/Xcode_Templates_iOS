@@ -2,10 +2,8 @@
 
 import UIKit
 
-class ___VARIABLE_productName___ViewController: AbstractViewController {
+class ___VARIABLE_productName___ViewController: UIViewController {
     var presenter: ___VARIABLE_productName___Presenter!
-    var delegate: ___VARIABLE_productName___ViewDelegate?
-    var dataSource: ___VARIABLE_productName___ViewDataSource?
     
     
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -17,8 +15,8 @@ class ___VARIABLE_productName___ViewController: AbstractViewController {
     }
     
     private func setupCollectionView() {
-        collectionView.delegate = delegate
-        collectionView.dataSource = dataSource
+        collectionView.delegate = presenter.delegate
+        collectionView.dataSource = presenter.dataSource
         collectionView.reloadData()
     }
     

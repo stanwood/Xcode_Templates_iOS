@@ -4,16 +4,25 @@ protocol ___VARIABLE_productName___Viewable: class {
     
 }
 
-class ___VARIABLE_productName___Presenter {
+class ___VARIABLE_productName___Presenter: Presentable {
     
-    private weak var view: ___VARIABLE_productName___Viewable?
-    private var action: ___VARIABLE_productName___Actionable
-    private var parameters: ___VARIABLE_productName___Parametable
+    // MARK:- Properties
     
-    init(with view: ___VARIABLE_productName___Viewable, action: ___VARIABLE_productName___Actionable, paramaters: ___VARIABLE_productName___Parametable) {
-        self.view = view
-        self.action = action
-        self.parameters = paramaters
+    weak var viewable: ___VARIABLE_productName___Viewable?
+    var actionable: ___VARIABLE_productName___Actionable
+    var parameterable: ___VARIABLE_productName___Parametable
+    
+    // MARK:- Typealias
+    
+    typealias Actionable = ___VARIABLE_productName___Actionable
+    typealias Parameterable = ___VARIABLE_productName___Parametable
+    typealias Viewable = ___VARIABLE_productName___Viewable
+    
+    
+    required init(actionable: ___VARIABLE_productName___Actionable, parameterable: ___VARIABLE_productName___Parametable, viewable: ___VARIABLE_productName___Viewable) {
+        self.viewable = viewable
+        self.actionable = actionable
+        self.parameterable = parameterable
     }
     
     func viewDidLoad() {

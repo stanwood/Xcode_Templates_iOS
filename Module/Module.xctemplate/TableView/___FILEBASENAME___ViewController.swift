@@ -2,11 +2,8 @@
 
 import UIKit
 
-class ___VARIABLE_productName___ViewController: AbstractViewController {
+class ___VARIABLE_productName___ViewController: UIViewController {
     var presenter: ___VARIABLE_productName___Presenter!
-    var delegate: ___VARIABLE_productName___ViewDelegate?
-    var dataSource: ___VARIABLE_productName___ViewDataSource?
-    
     
     @IBOutlet private weak var tableView: UITableView!
     
@@ -17,8 +14,8 @@ class ___VARIABLE_productName___ViewController: AbstractViewController {
     }
     
     private func setupTableView() {
-        tableView.delegate = delegate
-        tableView.dataSource = dataSource
+        tableView.delegate = presenter.delegate
+        tableView.dataSource = presenter.dataSource
         tableView.reloadData()
     }
     

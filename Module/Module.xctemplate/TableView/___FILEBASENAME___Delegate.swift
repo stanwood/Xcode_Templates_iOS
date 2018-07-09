@@ -2,7 +2,7 @@
 
 import StanwoodCore
 
-class ___VARIABLE_productName___ViewDelegate: Stanwood.AbstractTableDelegate {
+class ___VARIABLE_productName___Delegate: Stanwood.AbstractTableDelegate {
     
     weak var presenter: ___VARIABLE_productName___Presenter?
     
