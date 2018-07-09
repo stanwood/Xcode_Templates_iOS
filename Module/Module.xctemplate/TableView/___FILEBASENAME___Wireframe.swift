@@ -6,7 +6,7 @@ class ___VARIABLE_productName___Wireframe {
     	return UIStoryboard.instantiate(viewController: ___VARIABLE_productName___ViewController.self)
     }
     
-    static func prepare(_ viewController: ___VARIABLE_productName___ViewController, with  actions: ___VARIABLE_productName___Actionable, parameters: ___VARIABLE_productName___Parametable) {
+    static func prepare(_ viewController: ___VARIABLE_productName___ViewController, with  actions: ___VARIABLE_productName___Actionable, and parameters: ___VARIABLE_productName___Parameterable) {
     	let presenter =  ___VARIABLE_productName___Presenter(actionable: actions, parameterable: parameters, viewable: viewController)
         viewController.presenter = presenter
     }

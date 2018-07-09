@@ -10,19 +10,19 @@ class ___VARIABLE_productName___Presenter: Presentable, SourceTypePresentable {
     
     weak var viewable: ___VARIABLE_productName___Viewable?
     var actionable: ___VARIABLE_productName___Actionable
-    var parameterable: ___VARIABLE_productName___Parametable
+    var parameterable: ___VARIABLE_productName___Parameterable
     var dataSource: ___VARIABLE_productName___DataSource!
     var delegate: ___VARIABLE_productName___Delegate!
     
     // MARK:- Typealias
     
     typealias Actionable = ___VARIABLE_productName___Actionable
-    typealias Parameterable = ___VARIABLE_productName___Parametable
+    typealias Parameterable = ___VARIABLE_productName___Parameterable
     typealias Viewable = ___VARIABLE_productName___Viewable
     typealias DataSource = ___VARIABLE_productName___DataSource
     typealias Delegate = ___VARIABLE_productName___Delegate
     
-    required init(actionable: ___VARIABLE_productName___Actionable, parameterable: ___VARIABLE_productName___Parametable, viewable: ___VARIABLE_productName___Viewable) {
+    required init(actionable: ___VARIABLE_productName___Actionable, parameterable: ___VARIABLE_productName___Parameterable, viewable: ___VARIABLE_productName___Viewable) {
         self.viewable = viewable
         self.actionable = actionable
         self.parameterable = parameterable
