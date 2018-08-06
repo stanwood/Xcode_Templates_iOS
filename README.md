@@ -4,4 +4,7 @@
 // TODO
 
 # Installation
-// TODO
+
+## Module Template
+
+`~/Library/Application Support/Developer/Shared/Xcode/File Templates/`
