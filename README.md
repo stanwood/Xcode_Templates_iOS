@@ -4,9 +4,7 @@
 
 ## Module:
 
-![Module](Media/module.gif | width=300)
-<img src="Media/module.gif" alt="Module" width="400" height="400">
-
+<img src="Media/module.gif" alt="Module" width="450" height="800">
 
 # Installation
 
