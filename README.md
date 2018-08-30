@@ -12,11 +12,15 @@
 
 1. Check if `brew` is installed, or install if not.
 
-`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+```yml
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 2. Install `wget`.
 
-`brew install wget`
+```yml
+brew install wget
+```
 
 3. Install the template
 
