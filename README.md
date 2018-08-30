@@ -4,7 +4,8 @@
 
 ## Module:
 
-![Module](Media/module.gif =1000x2000)
+![Module](Media/module.gif =200x200)
+
 
 # Installation
 
