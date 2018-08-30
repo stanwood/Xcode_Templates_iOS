@@ -4,7 +4,7 @@
 
 ## Module:
 
-<img src="Media/module.gif" alt="Module" width="450" height="800">
+<img src="Media/module.gif" alt="Module" width="900">
 
 # Installation
 
