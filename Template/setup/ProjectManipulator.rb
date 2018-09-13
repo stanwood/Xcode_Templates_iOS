@@ -73,11 +73,13 @@ module Stanwood
       # Replace the Podfile with a simpler one with only one target
       podfile_path = project_folder + "/Podfile"
       podfile_text = <<-RUBY
+
 use_frameworks!
+
 platform :ios, '10.0'
 inhibit_all_warnings!
 
-target '#{test_target.name}' do
+target '#{test_target[0].name}' do
   ${INCLUDED_PODS}
 end
 RUBY
