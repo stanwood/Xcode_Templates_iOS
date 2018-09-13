@@ -1,6 +1,6 @@
 require 'xcodeproj'
 
-module Pod
+module Stanwood
 
   class ProjectManipulator
     attr_reader :configurator, :xcodeproj_path, :platform, :remove_demo_target, :string_replacements, :prefix
@@ -76,7 +76,7 @@ module Pod
 use_frameworks!
 target '#{test_target.name}' do
   pod '#{@configurator.pod_name}', :path => '../'
-  
+
   ${INCLUDED_PODS}
 end
 RUBY
