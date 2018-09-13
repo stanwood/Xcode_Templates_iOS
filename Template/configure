@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+$current_dir = File.dirname(File.expand_path(__FILE__))
+
+print "\n\n========= 🦊🦊🦊 STANWOOD XC TOOL 🦊🦊🦊 =======\n\n"
+
+Dir[File.join($current_dir, "setup/*.rb")].each do |file|
+  # TODO: Understand what this does. Does not work without it
+  require_relative(file)
+end
+
+project_name = ARGV.shift
+print "Let's create a stanwood Xcode project for: " + project_name + "\n"
+
+# Exectute
+Stanwood::TemplateConfigurator.new(project_name).run
