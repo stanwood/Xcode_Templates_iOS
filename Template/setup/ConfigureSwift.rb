@@ -12,20 +12,16 @@ module Stanwood
     end
 
     def perform
-      keep_demo = "Yes"
+
       configurator.set_test_framework "xctest", "swift", "swift"
 
-      configurator.add_pod_to_podfile "'StanwoodAnalytics'"
-      configurator.add_pod_to_podfile "'StanwoodCore'"
-      configurator.add_pod_to_podfile "'StanwoodDebugger', :configurations => ['Debug']"
-      configurator.add_pod_to_podfile "'StanwoodDialog'"
-      configurator.add_pod_to_podfile "'Firebase'"
+      add_pods
 
       Stanwood::ProjectManipulator.new({
         :configurator => @configurator,
         :xcodeproj_path => "templates/swift/Example/PROJECT.xcodeproj",
         :platform => :ios,
-        :remove_demo_project => (keep_demo == :no),
+        :remove_demo_project => :yes,
         :prefix => ""
       }).run
 
@@ -43,6 +39,20 @@ module Stanwood
       # remove podspec for osx
       `rm ./NAME-osx.podspec`
     end
+
+    def add_pods
+      configurator.add_pod_to_podfile "'StanwoodAnalytics'"
+      configurator.add_pod_to_podfile "'StanwoodCore'"
+      configurator.add_pod_to_podfile "'StanwoodDebugger', :configurations => ['Debug']"
+      configurator.add_pod_to_podfile "'StanwoodDialog'"
+
+      add_firebase = configurator.ask_with_answers("Would you like to add Firebase", ["Yes", "No"]).to_sym
+      case add_firebase
+        when :yes
+          configurator.add_pod_to_podfile "'Firebase'"
+      end
+    end
+
   end
 
 end
