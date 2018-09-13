@@ -13,13 +13,13 @@ module Stanwood
 
     def perform
       keep_demo = "Yes"
-      # configurator.set_test_framework "xctest", "swift", "swift"
+      configurator.set_test_framework "xctest", "swift", "swift"
 
-      configurator.add_pod_to_podfile "StanwoodAnalytics"
-      configurator.add_pod_to_podfile "StanwoodCore"
-      configurator.add_pod_to_podfile "StanwoodDebugger, configurations => ['Debug']"
-      configurator.add_pod_to_podfile "StanwoodDialog"
-      configurator.add_pod_to_podfile "Firebase"
+      configurator.add_pod_to_podfile "'StanwoodAnalytics'"
+      configurator.add_pod_to_podfile "'StanwoodCore'"
+      configurator.add_pod_to_podfile "'StanwoodDebugger', :configurations => ['Debug']"
+      configurator.add_pod_to_podfile "'StanwoodDialog'"
+      configurator.add_pod_to_podfile "'Firebase'"
 
       Stanwood::ProjectManipulator.new({
         :configurator => @configurator,

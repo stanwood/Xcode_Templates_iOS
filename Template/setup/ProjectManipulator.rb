@@ -74,9 +74,10 @@ module Stanwood
       podfile_path = project_folder + "/Podfile"
       podfile_text = <<-RUBY
 use_frameworks!
-target '#{test_target.name}' do
-  pod '#{@configurator.pod_name}', :path => '../'
+platform :ios, '10.0'
+inhibit_all_warnings!
 
+target '#{test_target.name}' do
   ${INCLUDED_PODS}
 end
 RUBY
