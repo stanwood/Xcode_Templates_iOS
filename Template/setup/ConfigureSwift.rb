@@ -33,16 +33,10 @@ module Stanwood
       `touch Pod/Classes/ReplaceMe.swift`
 
       # The Podspec should be 8.0 instead of 7.0
-      text = File.read("NAME.podspec")
-      text.gsub!("7.0", "8.0")
-      File.open("NAME.podspec", "w") { |file| file.puts text }
+      # text = File.read("NAME.podspec")
+      # text.gsub!("7.0", "8.0")
+      # File.open("NAME.podspec", "w") { |file| file.puts text }
 
-      # clean_up
-    end
-
-    def clean_up
-      # remove podspec for osx
-      `rm ./NAME-osx.podspec`
     end
 
     def add_pods
