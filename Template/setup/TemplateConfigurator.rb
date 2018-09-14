@@ -28,6 +28,8 @@ module Stanwood
       reinitialize_git_repo
       run_pod_install
 
+      `mv ./Example/ ../`
+
       @message_bank.farewell_message
     end
 
