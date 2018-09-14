@@ -37,6 +37,10 @@ module Stanwood
       text.gsub!("7.0", "8.0")
       File.open("NAME.podspec", "w") { |file| file.puts text }
 
+      # clean_up
+    end
+
+    def clean_up
       # remove podspec for osx
       `rm ./NAME-osx.podspec`
     end

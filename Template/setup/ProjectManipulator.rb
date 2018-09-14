@@ -28,12 +28,13 @@ module Stanwood
       replace_internal_project_settings
 
       @project = Xcodeproj::Project.open(@xcodeproj_path)
-      add_podspec_metadata
-      remove_demo_project if @remove_demo_target
+      # add_podspec_metadata // Not required
+      # remove_demo_project if @remove_demo_target /// Check the code
       @project.save
 
       rename_files
       rename_project_folder
+
     end
 
     def add_podspec_metadata
@@ -74,15 +75,15 @@ module Stanwood
       podfile_path = project_folder + "/Podfile"
       podfile_text = <<-RUBY
 
-use_frameworks!
+                      use_frameworks!
 
-platform :ios, '10.0'
-inhibit_all_warnings!
+                      platform :ios, '10.0'
+                      inhibit_all_warnings!
 
-target '#{test_target[0].name}' do
-  ${INCLUDED_PODS}
-end
-RUBY
+                      target '#{test_target[0].name}' do
+                        ${INCLUDED_PODS}
+                      end
+                      RUBY
       File.open(podfile_path, "w") { |file| file.puts podfile_text }
     end
 
