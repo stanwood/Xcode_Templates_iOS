@@ -2,11 +2,25 @@
 
 import UIKit
 
-class ___VARIABLE_productName___ViewController: UIViewController {
+class ___VARIABLE_productName___ViewController: UIViewController, SourceTypePresentable {
+
+    // MARK:- Properties
+
     var presenter: ___VARIABLE_productName___Presenter!
+    var dataSource: ___VARIABLE_productName___DataSource!
+    var delegate: ___VARIABLE_productName___Delegate!
     
+    // MARK:- Outlets
+
     @IBOutlet private weak var tableView: UITableView!
     
+    // MARK:- Typealias
+
+    typealias DataSource = ___VARIABLE_productName___DataSource
+    typealias Delegate = ___VARIABLE_productName___Delegate
+    
+    // MARK:- LifeCycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -14,11 +28,14 @@ class ___VARIABLE_productName___ViewController: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.delegate = presenter.delegate
-        tableView.dataSource = presenter.dataSource
+        delegate = ___VARIABLE_productName___Delegate(dataType: Stanwood.Elements<Item>(items: []))
+        dataSource = ___VARIABLE_productName___DataSource(dataType: Stanwood.Elements<Item>(items: []))
+        delegate.presenter = presenter
+        dataSource.presenter = presenter
+        tableView.delegate = delegate
+        tableView.dataSource = dataSource
         tableView.reloadData()
     }
-    
 }
 
 extension ___VARIABLE_productName___ViewController: ___VARIABLE_productName___Viewable {
