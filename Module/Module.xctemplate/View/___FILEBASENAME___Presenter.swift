@@ -8,7 +8,7 @@ class ___VARIABLE_productName___Presenter: Presentable {
     
     // MARK:- Properties
     
-    weak var viewable: ___VARIABLE_productName___Viewable?
+    unowned var viewable: ___VARIABLE_productName___Viewable
     var actionable: ___VARIABLE_productName___Actionable
     var parameterable: ___VARIABLE_productName___Parameterable
     
