@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1321BAAD215C0E6900726E6B /* ReplaceMe_Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAAC215C0E6900726E6B /* ReplaceMe_Helpers.swift */; };
+		1321BAB0215C0EFB00726E6B /* ReplaceMe_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAAF215C0EFB00726E6B /* ReplaceMe_Extensions.swift */; };
+		1321BAB3215C0F1A00726E6B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAB2215C0F1A00726E6B /* Networking.swift */; };
+		1321BAB5215C0F7B00726E6B /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAB4215C0F7B00726E6B /* NetworkingManager.swift */; };
+		1321BAB9215C11B500726E6B /* ReplaceMe_Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAB8215C11B500726E6B /* ReplaceMe_Services.swift */; };
+		1321BABC215C11D800726E6B /* ReplaceMe_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BABB215C11D800726E6B /* ReplaceMe_Model.swift */; };
 		13DB5C46214AA3DF0014642E /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB5C45214AA3DF0014642E /* AppController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -27,6 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1321BAAC215C0E6900726E6B /* ReplaceMe_Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMe_Helpers.swift; sourceTree = "<group>"; };
+		1321BAAF215C0EFB00726E6B /* ReplaceMe_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMe_Extensions.swift; sourceTree = "<group>"; };
+		1321BAB2215C0F1A00726E6B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		1321BAB4215C0F7B00726E6B /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		1321BAB8215C11B500726E6B /* ReplaceMe_Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMe_Services.swift; sourceTree = "<group>"; };
+		1321BABB215C11D800726E6B /* ReplaceMe_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMe_Model.swift; sourceTree = "<group>"; };
 		13DB5C45214AA3DF0014642E /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* PROJECT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PROJECT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +70,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1321BAA2215C0CF200726E6B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1321BAB6215C106500726E6B /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1321BAA5215C0D3100726E6B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1321BAB4215C0F7B00726E6B /* NetworkingManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1321BAA8215C0D5E00726E6B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1321BAB1215C0F0000726E6B /* Protocols */,
+				1321BAAE215C0EB400726E6B /* Extensions */,
+				1321BAAB215C0E5700726E6B /* Helpers */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1321BAAB215C0E5700726E6B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1321BAAC215C0E6900726E6B /* ReplaceMe_Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1321BAAE215C0EB400726E6B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1321BAAF215C0EFB00726E6B /* ReplaceMe_Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1321BAB1215C0F0000726E6B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1321BAB2215C0F1A00726E6B /* Networking.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1321BAB6215C106500726E6B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1321BAB7215C109800726E6B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1321BAB8215C11B500726E6B /* ReplaceMe_Services.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1321BABA215C11C300726E6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1321BABB215C11D800726E6B /* ReplaceMe_Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		13DB5C47214AA5640014642E /* Stanwood */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +185,11 @@
 		607FACD21AFB9204008FA782 /* PROJECT */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				1321BAA8215C0D5E00726E6B /* Utilities */,
+				1321BAA5215C0D3100726E6B /* Networking */,
+				1321BAB7215C109800726E6B /* Services */,
+				1321BABA215C11C300726E6B /* Model */,
+				1321BAA2215C0CF200726E6B /* Modules */,
 				13DB5C4B214AA8700014642E /* Supporting Files */,
 				13DB5C47214AA5640014642E /* Stanwood */,
 			);
@@ -227,7 +317,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1321BAAD215C0E6900726E6B /* ReplaceMe_Helpers.swift in Sources */,
+				1321BAB0215C0EFB00726E6B /* ReplaceMe_Extensions.swift in Sources */,
+				1321BAB3215C0F1A00726E6B /* Networking.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				1321BABC215C11D800726E6B /* ReplaceMe_Model.swift in Sources */,
+				1321BAB9215C11B500726E6B /* ReplaceMe_Services.swift in Sources */,
+				1321BAB5215C0F7B00726E6B /* NetworkingManager.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				13DB5C46214AA3DF0014642E /* AppController.swift in Sources */,
 			);

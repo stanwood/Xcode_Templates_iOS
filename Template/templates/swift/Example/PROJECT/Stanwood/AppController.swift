@@ -3,7 +3,7 @@
 //  PROJECT
 //
 //  Created by PROJECT_OWNER on TODAYS_DATE.
-//  Copyright (c) TODAYS_YEAR stanwood GmbH. All rights reserved.
+//  Copyright © TODAYS_YEAR stanwood GmbH. All rights reserved.
 //
 
 
