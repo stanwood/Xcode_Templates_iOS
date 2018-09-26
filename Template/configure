@@ -2,7 +2,7 @@
 
 $current_dir = File.dirname(File.expand_path(__FILE__))
 
-print "\n\n========= 🦊🦊🦊 STANWOOD XC TOOL 🦊🦊🦊 =======\n\n"
+puts "\n\n========= 🦊🦊🦊 STANWOOD XC TOOL 🦊🦊🦊 =======\n"
 
 Dir[File.join($current_dir, "setup/*.rb")].each do |file|
   # TODO: Understand what this does. Does not work without it
@@ -10,7 +10,8 @@ Dir[File.join($current_dir, "setup/*.rb")].each do |file|
 end
 
 project_name = ARGV.shift
-print "Let's create a stanwood Xcode project for: " + project_name + "\n"
+
+puts "Let's create a stanwood Xcode project for: " + project_name
 
 # Exectute
 Stanwood::TemplateConfigurator.new(project_name).run
