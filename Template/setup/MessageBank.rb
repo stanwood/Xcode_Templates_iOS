@@ -60,13 +60,11 @@ module Stanwood
     end
 
     def farewell_message
-      puts ""
-
-      puts " Ace! you're ready to go!"
+      puts "\n Ace! you're ready to go!"
       puts " We will start you off by opening your project in Xcode"
 
       pod_name = @configurator.pod_name
-      run_command "open '../PROJECT/#{pod_name}.xcworkspace'", "open '../PROJECT/#{pod_name}.xcworkspace'"
+      run_command "open '../#{pod_name}/#{pod_name}.xcworkspace'", "open '../#{pod_name}/#{pod_name}.xcworkspace'"
     end
 
 

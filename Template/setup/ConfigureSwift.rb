@@ -14,16 +14,11 @@ module Stanwood
     def perform
 
       keep_demo = "Yes"
-      # configurator.set_test_framework "xctest", "swift", "swift"
-
       add_pods
-
-      # I might need this after
-      # " + @configurator.pod_name + "
-
       Stanwood::ProjectManipulator.new({
         :configurator => @configurator,
         :xcodeproj_path => "templates/swift/PROJECT/PROJECT.xcodeproj",
+        :xcodeproj_renamed_path => "templates/swift/" + @configurator.pod_name + "/PROJECT.xcodeproj",
         :platform => :ios,
         :remove_demo_project => (keep_demo == :no),
         :prefix => ""
@@ -37,14 +32,21 @@ module Stanwood
       configurator.add_pod_to_podfile "'StanwoodCore'"
       configurator.add_pod_to_podfile "'StanwoodDebugger', :configurations => ['Debug']"
       configurator.add_pod_to_podfile "'StanwoodDialog'"
+      configurator.add_pod_to_podfile "'Firebase'"
 
-      add_firebase = configurator.ask_with_answers("Would you like to add Firebase", ["Yes", "No"]).to_sym
-      case add_firebase
+      add_moya = configurator.ask_with_answers("Would you like to add Moya", ["Yes", "No"]).to_sym
+      case add_moya
         when :yes
-          configurator.add_pod_to_podfile "'Firebase'"
+          configurator.add_pod_to_podfile "'Moya'"
+      end
+
+      add_image_cache = configurator.ask_with_answers("Would you like to add SDWebImage || Kingficher", ["SDWebImage", "Kingficher"]).to_sym
+      case add_image_cache
+      when :SDWebImage
+        configurator.add_pod_to_podfile "'Firebase'"
+      when :Kingficher
+        configurator.add_pod_to_podfile "'Kingficher'"
       end
     end
-
   end
-
 end

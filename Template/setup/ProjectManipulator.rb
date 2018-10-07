@@ -3,7 +3,7 @@ require 'xcodeproj'
 module Stanwood
 
   class ProjectManipulator
-    attr_reader :configurator, :xcodeproj_path, :platform, :remove_demo_target, :string_replacements, :prefix
+    attr_reader :configurator, :xcodeproj_path, :xcodeproj_renamed_path, :platform, :remove_demo_target, :string_replacements, :prefix
 
     def self.perform(options)
       new(options).perform
@@ -11,6 +11,7 @@ module Stanwood
 
     def initialize(options)
       @xcodeproj_path = options.fetch(:xcodeproj_path)
+      @xcodeproj_renamed_path = options.fetch(:xcodeproj_renamed_path)
       @configurator = options.fetch(:configurator)
       @platform = options.fetch(:platform)
       @remove_demo_target = options.fetch(:remove_demo_project)
@@ -29,8 +30,8 @@ module Stanwood
       puts "Running replace_internal_project_settings"
       replace_internal_project_settings
 
-      puts @xcodeproj_path
-      
+      puts @xcodeproj_renamed_path
+
       @project = Xcodeproj::Project.open(@xcodeproj_path)
       # add_podspec_metadata // Not required
       # remove_demo_project if @remove_demo_target /// Check the code
@@ -95,6 +96,10 @@ module Stanwood
       File.dirname @xcodeproj_path
     end
 
+    def project_renamed_folder
+      File.dirname @xcodeproj_renamed_path
+    end
+
     def rename_files
       # shared schemes have project specific names
       scheme_path = project_folder + "/PROJECT.xcodeproj/xcshareddata/xcschemes/"
@@ -126,8 +131,15 @@ module Stanwood
     end
 
     def rename_project_folder
+
+      puts "\n\nChecking if " + project_folder + "/PROJECT folder exists...\n"
       if Dir.exist? project_folder + "/PROJECT"
+
+        puts "Renaming it to: " + project_folder + "/" + @configurator.pod_name + "..."
         File.rename(project_folder + "/PROJECT", project_folder + "/" + @configurator.pod_name)
+
+        puts "Renaming root folder to: " + project_renamed_folder
+        File.rename(project_folder, project_renamed_folder)
       end
     end
 
@@ -143,7 +155,5 @@ module Stanwood
         File.open(name, "w") { |file| file.puts text }
       end
     end
-
   end
-
 end

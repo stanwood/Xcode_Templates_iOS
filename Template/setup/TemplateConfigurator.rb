@@ -42,7 +42,7 @@ module Stanwood
       puts "Running run_pod_install"
       run_pod_install
 
-      `mv ./PROJECT/ ../`
+      `mv ./#{pod_name}/ ../`
 
       @message_bank.farewell_message
     end
@@ -111,11 +111,11 @@ module Stanwood
       puts "\nRunning " + "pod install".magenta + " on your new library."
       puts ""
 
-      Dir.chdir("PROJECT") do
+      Dir.chdir(pod_name) do
         system "pod install"
       end
 
-      `git add PROJECT/#{pod_name}.xcodeproj/project.pbxproj`
+      `git add #{pod_name}/#{pod_name}.xcodeproj/project.pbxproj`
       `git commit -m "Initial commit"`
     end
 
@@ -218,7 +218,7 @@ module Stanwood
     end
 
     def podfile_path
-      'PROJECT/Podfile'
+      pod_name + '/Podfile'
     end
 
     #----------------------------------------#
