@@ -13,12 +13,15 @@ module Stanwood
 
     def perform
 
+      project_key = configurator.ask_for_project_key("Please enter a project key").to_sym
+
       add_pods
       Stanwood::ProjectManipulator.new({
         :configurator => @configurator,
         :xcodeproj_path => "templates/swift/PROJECT/PROJECT.xcodeproj",
         :xcodeproj_renamed_path => "templates/swift/" + @configurator.pod_name + "/PROJECT.xcodeproj",
         :platform => :ios,
+        :project_key => project_key
       }).run
 
       `mv ./templates/swift/* ./`

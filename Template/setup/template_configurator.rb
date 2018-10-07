@@ -58,6 +58,21 @@ module Stanwood
       answer
     end
 
+    def ask_for_project_key(question)
+      answer = ""
+
+      puts "\n#{question}?"
+      @message_bank.show_prompt
+      answer = gets.chomp
+
+      if answer.length === 3 then
+        answer
+      else
+        print "\nYou need to provide a project key with three characters."
+        ask_for_project_key(question)
+      end
+    end
+
     def ask_with_answers(question, possible_answers)
 
       print "\n#{question}? ["
