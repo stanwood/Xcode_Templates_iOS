@@ -25,8 +25,12 @@ module Stanwood
         "PROJECT" => @configurator.pod_name,
         "CPD" => @prefix
       }
+
+      puts "Running replace_internal_project_settings"
       replace_internal_project_settings
 
+      puts @xcodeproj_path
+      
       @project = Xcodeproj::Project.open(@xcodeproj_path)
       # add_podspec_metadata // Not required
       # remove_demo_project if @remove_demo_target /// Check the code

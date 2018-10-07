@@ -14,13 +14,16 @@ module Stanwood
     def perform
 
       keep_demo = "Yes"
-      configurator.set_test_framework "xctest", "swift", "swift"
+      # configurator.set_test_framework "xctest", "swift", "swift"
 
       add_pods
 
+      # I might need this after
+      # " + @configurator.pod_name + "
+
       Stanwood::ProjectManipulator.new({
         :configurator => @configurator,
-        :xcodeproj_path => "templates/swift/" + @configurator.pod_name + "/PROJECT.xcodeproj",
+        :xcodeproj_path => "templates/swift/PROJECT/PROJECT.xcodeproj",
         :platform => :ios,
         :remove_demo_project => (keep_demo == :no),
         :prefix => ""

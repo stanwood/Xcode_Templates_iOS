@@ -18,17 +18,31 @@ module Stanwood
 
       ConfigureSwift.perform(configurator: self)
 
+      puts "Running replace_variables_in_files"
       replace_variables_in_files
+
+      puts "Running clean_template_files"
       clean_template_files
-      # rename_template_files
+
+      puts "Running add_pods_to_podfile"
       add_pods_to_podfile
+
+      puts "Running customise_prefix"
       customise_prefix
+
+      puts "Running rename_classes_folder"
       rename_classes_folder
+
+      puts "Running ensure_carthage_compatibility"
       ensure_carthage_compatibility
+
+      puts "Running reinitialize_git_repo"
       reinitialize_git_repo
+
+      puts "Running run_pod_install"
       run_pod_install
 
-      `mv ./Example/ ../`
+      `mv ./PROJECT/ ../`
 
       @message_bank.farewell_message
     end
@@ -90,18 +104,18 @@ module Stanwood
     #----------------------------------------#
 
     def ensure_carthage_compatibility
-      FileUtils.ln_s('Example/Pods/Pods.xcodeproj', '_Pods.xcodeproj')
+      FileUtils.ln_s('PROJECT/Pods/Pods.xcodeproj', '_Pods.xcodeproj')
     end
 
     def run_pod_install
       puts "\nRunning " + "pod install".magenta + " on your new library."
       puts ""
 
-      Dir.chdir("Example") do
+      Dir.chdir("PROJECT") do
         system "pod install"
       end
 
-      `git add Example/#{pod_name}.xcodeproj/project.pbxproj`
+      `git add PROJECT/#{pod_name}.xcodeproj/project.pbxproj`
       `git commit -m "Initial commit"`
     end
 
@@ -143,7 +157,7 @@ module Stanwood
     end
 
     def customise_prefix
-      prefix_path = "Example/Tests/Tests-Prefix.pch"
+      prefix_path = "PROJECT/Tests/Tests-Prefix.pch"
       return unless File.exists? prefix_path
 
       pch = File.read prefix_path
@@ -153,7 +167,7 @@ module Stanwood
 
     def set_test_framework(test_type, extension, folder)
       content_path = "setup/test_examples/" + test_type + "." + extension
-      tests_path = "templates/" + folder + "/Example/Tests/Tests." + extension
+      tests_path = "templates/" + folder + "/PROJECT/Tests/Tests." + extension
       tests = File.read tests_path
       tests.gsub!("${TEST_EXAMPLE}", File.read(content_path) )
       File.open(tests_path, "w") { |file| file.puts tests }
@@ -204,7 +218,7 @@ module Stanwood
     end
 
     def podfile_path
-      'Example/Podfile'
+      'PROJECT/Podfile'
     end
 
     #----------------------------------------#
