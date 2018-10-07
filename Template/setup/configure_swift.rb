@@ -13,15 +13,12 @@ module Stanwood
 
     def perform
 
-      keep_demo = "Yes"
       add_pods
       Stanwood::ProjectManipulator.new({
         :configurator => @configurator,
         :xcodeproj_path => "templates/swift/PROJECT/PROJECT.xcodeproj",
         :xcodeproj_renamed_path => "templates/swift/" + @configurator.pod_name + "/PROJECT.xcodeproj",
         :platform => :ios,
-        :remove_demo_project => (keep_demo == :no),
-        :prefix => ""
       }).run
 
       `mv ./templates/swift/* ./`
@@ -62,11 +59,11 @@ module Stanwood
           configurator.add_pod_to_podfile "'FontAwesome.swift'"
       end
 
-      add_image_cache = configurator.ask_with_answers("Would you like to add SDWebImage || Kingficher", ["SDWebImage", "Kingfisher"]).to_sym
+      add_image_cache = configurator.ask_with_answers("Would you like to add SDWebImage || Kingficher? Choose 1 for SDWebImage and 2 for Kingfisher", ["1", "2"]).to_sym
       case add_image_cache
-      when :SDWebImage
+      when :"1"
         configurator.add_pod_to_podfile "'SDWebImage'"
-      when :Kingficher
+      when :"2"
         configurator.add_pod_to_podfile "'Kingfisher'"
       end
     end

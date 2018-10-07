@@ -4,12 +4,11 @@ require 'colored2'
 module Stanwood
   class TemplateConfigurator
 
-    attr_reader :pod_name, :pods_for_podfile, :prefixes, :test_example_file, :username, :email
+    attr_reader :pod_name, :pods_for_podfile, :test_example_file, :username, :email
 
     def initialize(pod_name)
       @pod_name = pod_name
       @pods_for_podfile = []
-      @prefixes = []
       @message_bank = MessageBank.new(self)
     end
 
@@ -26,9 +25,6 @@ module Stanwood
 
       puts "Running add_pods_to_podfile"
       add_pods_to_podfile
-
-      puts "Running customise_prefix"
-      customise_prefix
 
       puts "Running rename_classes_folder"
       rename_classes_folder
@@ -150,19 +146,6 @@ module Stanwood
       end.join("\n    ")
       podfile.gsub!("${INCLUDED_PODS}", podfile_content)
       File.open(podfile_path, "w") { |file| file.puts podfile }
-    end
-
-    def add_line_to_pch line
-      @prefixes << line
-    end
-
-    def customise_prefix
-      prefix_path = "PROJECT/Tests/Tests-Prefix.pch"
-      return unless File.exists? prefix_path
-
-      pch = File.read prefix_path
-      pch.gsub!("${INCLUDED_PREFIXES}", @prefixes.join("\n  ") )
-      File.open(prefix_path, "w") { |file| file.puts pch }
     end
 
     def set_test_framework(test_type, extension, folder)
