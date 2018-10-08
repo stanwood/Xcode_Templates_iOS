@@ -3,7 +3,7 @@ require 'xcodeproj'
 module Stanwood
 
   class ProjectManipulator
-    attr_reader :configurator, :xcodeproj_path, :xcodeproj_renamed_path, :platform, :string_replacements, :project_key
+    attr_reader :configurator, :xcodeproj_path, :xcodeproj_renamed_path, :platform, :string_replacements, :project_key, :organisation
 
     def self.perform(options)
       new(options).perform
@@ -15,6 +15,7 @@ module Stanwood
       @configurator = options.fetch(:configurator)
       @platform = options.fetch(:platform)
       @project_key = options.fetch(:project_key)
+      @organisation = options.fetch(:organisation)
     end
 
     def run
@@ -23,7 +24,8 @@ module Stanwood
         "TODAYS_DATE" => @configurator.date,
         "TODAYS_YEAR" => @configurator.year,
         "PROJECT" => @configurator.pod_name,
-        "KEY" => "#{@project_key}"
+        "KEY" => "#{@project_key}",
+        "ORGANISATION" => "#{@organisation}"
       }
 
       puts "Replace internal project settings for: #{@project_key}"

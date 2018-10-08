@@ -8,6 +8,6 @@
 
 import Foundation
 
-class NetworkingManager: Networking {
+class NetworkManager: Networking {
     
 }

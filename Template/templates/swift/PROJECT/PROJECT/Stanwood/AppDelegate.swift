@@ -3,7 +3,7 @@
 //  PROJECT
 //
 //  Created by PROJECT_OWNER on TODAYS_DATE.
-//  Copyright © TODAYS_YEAR stanwood GmbH. All rights reserved.
+//  Copyright © TODAYS_YEAR ORGANISATION. All rights reserved.
 //
 
 import UIKit
@@ -14,10 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var appController: AppController?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        appController = AppController(with: window!, application: application)
+        if let window = window {
+            appController = AppController(with: window)
+        }
         
         window?.makeKeyAndVisible()
         
