@@ -17,25 +17,25 @@ module Stanwood
 
       ConfigureSwift.perform(configurator: self)
 
-      puts "Running replace_variables_in_files"
+      puts "Replace variables in files"
       replace_variables_in_files
 
-      puts "Running clean_template_files"
+      puts "Clean template files"
       clean_template_files
 
-      puts "Running add_pods_to_podfile"
+      puts "Adding pods to podfile"
       add_pods_to_podfile
 
-      puts "Running rename_classes_folder"
+      puts "Renaming classes folder"
       rename_classes_folder
 
-      puts "Running ensure_carthage_compatibility"
+      puts "Ensuring carthage compatibility"
       ensure_carthage_compatibility
 
-      puts "Running reinitialize_git_repo"
+      puts "Reinitializing git repo"
       reinitialize_git_repo
 
-      puts "Running run_pod_install"
+      puts "Running pod install"
       run_pod_install
 
       `mv ./#{pod_name}/ ../`

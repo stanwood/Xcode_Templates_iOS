@@ -23,13 +23,11 @@ module Stanwood
         "TODAYS_DATE" => @configurator.date,
         "TODAYS_YEAR" => @configurator.year,
         "PROJECT" => @configurator.pod_name,
+        "KEY" => "#{@project_key}"
       }
 
-      # "KEY" => @configurator.project_key
-      puts "Running replace_internal_project_settings"
+      puts "Replace internal project settings for: #{@project_key}"
       replace_internal_project_settings
-
-      puts @xcodeproj_renamed_path
 
       @project = Xcodeproj::Project.open(@xcodeproj_path)
       @project.save
