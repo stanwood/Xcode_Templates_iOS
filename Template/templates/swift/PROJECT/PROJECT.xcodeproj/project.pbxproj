@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1321BAAD215C0E6900726E6B /* ReplaceMe_Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAAC215C0E6900726E6B /* ReplaceMe_Helpers.swift */; };
-		1321BAB0215C0EFB00726E6B /* ReplaceMe_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAAF215C0EFB00726E6B /* ReplaceMe_Extensions.swift */; };
 		1321BAB3215C0F1A00726E6B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAB2215C0F1A00726E6B /* Networking.swift */; };
 		1321BAB5215C0F7B00726E6B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAB4215C0F7B00726E6B /* NetworkManager.swift */; };
 		1321BAB9215C11B500726E6B /* ReplaceMe_Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAB8215C11B500726E6B /* ReplaceMe_Services.swift */; };
@@ -32,6 +31,7 @@
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		6C6F0C3A216C8A0C008EF82E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F0C39216C8A0C008EF82E /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,6 @@
 
 /* Begin PBXFileReference section */
 		1321BAAC215C0E6900726E6B /* ReplaceMe_Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMe_Helpers.swift; sourceTree = "<group>"; };
-		1321BAAF215C0EFB00726E6B /* ReplaceMe_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMe_Extensions.swift; sourceTree = "<group>"; };
 		1321BAB2215C0F1A00726E6B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		1321BAB4215C0F7B00726E6B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1321BAB8215C11B500726E6B /* ReplaceMe_Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMe_Services.swift; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* PROJECT_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECT_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C6F0C39216C8A0C008EF82E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +133,7 @@
 		1321BAAE215C0EB400726E6B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1321BAAF215C0EFB00726E6B /* ReplaceMe_Extensions.swift */,
+				6C6F0C39216C8A0C008EF82E /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,7 +297,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = ORGANISATION;
+				ORGANIZATIONNAME = "stanwood GmbH";
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -361,10 +361,10 @@
 				13901D6C216BF881005D9873 /* DataProvider.swift in Sources */,
 				13901D5E216BF67B005D9873 /* MainWireframe.swift in Sources */,
 				1321BAAD215C0E6900726E6B /* ReplaceMe_Helpers.swift in Sources */,
-				1321BAB0215C0EFB00726E6B /* ReplaceMe_Extensions.swift in Sources */,
 				13901D5C216BF67B005D9873 /* MainViewController.swift in Sources */,
 				13901D6A216BF866005D9873 /* Coordinator.swift in Sources */,
 				13901D62216BF6C8005D9873 /* Parameters.swift in Sources */,
+				6C6F0C3A216C8A0C008EF82E /* String+Extension.swift in Sources */,
 				1321BAB3215C0F1A00726E6B /* Networking.swift in Sources */,
 				1321BABC215C11D800726E6B /* ReplaceMe_Model.swift in Sources */,
 				1321BAB9215C11B500726E6B /* ReplaceMe_Services.swift in Sources */,

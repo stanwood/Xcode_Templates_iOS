@@ -9,8 +9,7 @@
 class MainWireframe {
     
     static func makeViewController() -> MainViewController {
-        return MainViewController()
-//        return UIStoryboard().instantiate(viewController: MainViewController.self)
+        return UIStoryboard().instantiate(viewController: MainViewController.self)
     }
     
     static func prepare(_ viewController: MainViewController, with  actions: MainActionable, and parameters: MainParameterable) {

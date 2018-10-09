@@ -38,6 +38,8 @@ module Stanwood
       configurator.add_pod_to_podfile "'Firebase'"
       configurator.add_pod_to_podfile "'ReachabilitySwift'"
       configurator.add_pod_to_podfile "'MBProgressHUD'"
+      configurator.add_pod_to_podfile "'Firebase/Core'"
+      configurator.add_pod_to_podfile "'Firebase/RemoteConfig'"
 
       add_moya = configurator.ask_with_answers("Would you like to add Moya", ["Yes", "No"]).to_sym
       case add_moya

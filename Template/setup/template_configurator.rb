@@ -17,25 +17,27 @@ module Stanwood
 
       ConfigureSwift.perform(configurator: self)
 
-      puts "Replace variables in files"
+      puts "Replace variables in files..."
       replace_variables_in_files
 
-      puts "Clean template files"
+      puts "Clean template files..."
       clean_template_files
 
-      puts "Adding pods to podfile"
+      puts "Renaming template files..."
+      rename_template_files
+
+      puts "Adding pods to podfile..."
       add_pods_to_podfile
 
-      puts "Renaming classes folder"
+      puts "Renaming classes folder..."
       rename_classes_folder
 
-      puts "Ensuring carthage compatibility"
+      puts "Ensuring carthage compatibility..."
       ensure_carthage_compatibility
 
-      puts "Reinitializing git repo"
+      puts "Reinitializing git repo..."
       reinitialize_git_repo
 
-      puts "Running pod install"
       run_pod_install
 
       `mv ./#{pod_name}/ ../`
@@ -201,6 +203,10 @@ module Stanwood
       (ENV['GIT_COMMITTER_EMAIL'] || `git config user.email`).strip
     end
 
+    def rename_template_files
+      FileUtils.mv "#{pod_name}/#{pod_name}/Supporting Files/PROJECT-Bridging-Header.h", "#{pod_name}/#{pod_name}/Supporting Files/#{pod_name}-Bridging-Header.h"
+      FileUtils.mv "#{pod_name}/Tests/PROJECTTests.swift", "#{pod_name}/Tests/#{pod_name}Tests.swift"
+    end
     def year
       Time.now.year.to_s
     end
