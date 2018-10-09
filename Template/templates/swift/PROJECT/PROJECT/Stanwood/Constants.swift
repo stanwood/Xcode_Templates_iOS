@@ -13,6 +13,12 @@ class Constants {
     struct FirebaseConfig {
         private init () {}
         
+        #if DEBUG
+        static let defaults = "Firebase-Default-Values-Debug"
+        #elseif STAGE
+        static let defaults = "Firebase-Default-Values-Stage"
+        #else
         static let defaults = "Firebase-Default-Values"
+        #endif
     }
 }
