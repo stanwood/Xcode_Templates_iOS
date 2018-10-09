@@ -21,7 +21,7 @@ module Stanwood
       Stanwood::ProjectManipulator.new({
         :configurator => @configurator,
         :xcodeproj_path => "templates/swift/PROJECT/PROJECT.xcodeproj",
-        :xcodeproj_renamed_path => "templates/swift/" + @configurator.pod_name + "/PROJECT.xcodeproj",
+        :xcodeproj_renamed_path => "templates/swift/" + @configurator.project_name + "/PROJECT.xcodeproj",
         :platform => :ios,
         :project_key => project_key,
         :organisation => organisation

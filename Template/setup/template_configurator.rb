@@ -4,10 +4,10 @@ require 'colored2'
 module Stanwood
   class TemplateConfigurator
 
-    attr_reader :pod_name, :pods_for_podfile, :test_example_file, :username, :email
+    attr_reader :project_name, :pods_for_podfile, :test_example_file, :username, :email
 
-    def initialize(pod_name)
-      @pod_name = pod_name
+    def initialize(project_name)
+      @project_name = project_name
       @pods_for_podfile = []
       @message_bank = MessageBank.new(self)
     end
@@ -40,7 +40,7 @@ module Stanwood
 
       run_pod_install
 
-      `mv ./#{pod_name}/ ../`
+      `mv ./#{project_name}/ ../`
 
       @message_bank.farewell_message
     end
@@ -124,11 +124,11 @@ module Stanwood
       puts "\nRunning " + "pod install".magenta + " on your new library."
       puts ""
 
-      Dir.chdir(pod_name) do
+      Dir.chdir(project_name) do
         system "pod install"
       end
 
-      `git add #{pod_name}/#{pod_name}.xcodeproj/project.pbxproj`
+      `git add #{project_name}/#{project_name}.xcodeproj/project.pbxproj`
       `git commit -m "Initial commit"`
     end
 
@@ -142,8 +142,8 @@ module Stanwood
       file_names = [podfile_path]
       file_names.each do |file_name|
         text = File.read(file_name)
-        text.gsub!("${POD_NAME}", @pod_name)
-        text.gsub!("${REPO_NAME}", @pod_name.gsub('+', '-'))
+        text.gsub!("${TARGET_NAME}", @project_name)
+        text.gsub!("${REPO_NAME}", @project_name.gsub('+', '-'))
         text.gsub!("${USER_NAME}", user_name)
         text.gsub!("${USER_EMAIL}", user_email)
         text.gsub!("${YEAR}", year)
@@ -174,7 +174,7 @@ module Stanwood
     end
 
     def rename_classes_folder
-      FileUtils.mv "Pod", @pod_name
+      FileUtils.mv "Pod", @project_name
     end
 
     def reinitialize_git_repo
@@ -204,8 +204,8 @@ module Stanwood
     end
 
     def rename_template_files
-      FileUtils.mv "#{pod_name}/#{pod_name}/Supporting Files/PROJECT-Bridging-Header.h", "#{pod_name}/#{pod_name}/Supporting Files/#{pod_name}-Bridging-Header.h"
-      FileUtils.mv "#{pod_name}/Tests/PROJECTTests.swift", "#{pod_name}/Tests/#{pod_name}Tests.swift"
+      FileUtils.mv "#{project_name}/#{project_name}/Supporting Files/PROJECT-Bridging-Header.h", "#{project_name}/#{project_name}/Supporting Files/#{project_name}-Bridging-Header.h"
+      FileUtils.mv "#{project_name}/Tests/PROJECTTests.swift", "#{project_name}/Tests/#{project_name}Tests.swift"
     end
     def year
       Time.now.year.to_s
@@ -216,7 +216,7 @@ module Stanwood
     end
 
     def podfile_path
-      pod_name + '/Podfile'
+      project_name + '/Podfile'
     end
 
     #----------------------------------------#

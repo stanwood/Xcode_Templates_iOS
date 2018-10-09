@@ -3,7 +3,7 @@ use_frameworks!
 platform :ios, '10.0'
 inhibit_all_warnings!
 
-target '${POD_NAME}' do
+target '${TARGET_NAME}' do
 
   ${INCLUDED_PODS}
 

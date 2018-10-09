@@ -23,7 +23,7 @@ module Stanwood
         "PROJECT_OWNER" => @configurator.user_name,
         "TODAYS_DATE" => @configurator.date,
         "TODAYS_YEAR" => @configurator.year,
-        "PROJECT" => @configurator.pod_name,
+        "PROJECT" => @configurator.project_name,
         "KEY" => "#{@project_key}",
         "ORGANISATION" => "#{@organisation}"
       }
@@ -50,10 +50,10 @@ module Stanwood
     def rename_files
       # shared schemes have project specific names
       scheme_path = project_folder + "/PROJECT.xcodeproj/xcshareddata/xcschemes/"
-      File.rename(scheme_path + "PROJECT.xcscheme", scheme_path +  @configurator.pod_name + ".xcscheme")
+      File.rename(scheme_path + "PROJECT.xcscheme", scheme_path +  @configurator.project_name + ".xcscheme")
 
       # rename xcproject
-      File.rename(project_folder + "/PROJECT.xcodeproj", project_folder + "/" +  @configurator.pod_name + ".xcodeproj")
+      File.rename(project_folder + "/PROJECT.xcodeproj", project_folder + "/" +  @configurator.project_name + ".xcodeproj")
     end
 
     def rename_project_folder
@@ -61,8 +61,8 @@ module Stanwood
       puts "\n\nChecking if " + project_folder + "/PROJECT folder exists...\n"
       if Dir.exist? project_folder + "/PROJECT"
 
-        puts "Renaming it to: " + project_folder + "/" + @configurator.pod_name + "..."
-        File.rename(project_folder + "/PROJECT", project_folder + "/" + @configurator.pod_name)
+        puts "Renaming it to: " + project_folder + "/" + @configurator.project_name + "..."
+        File.rename(project_folder + "/PROJECT", project_folder + "/" + @configurator.project_name)
 
         puts "Renaming root folder to: " + project_renamed_folder
         File.rename(project_folder, project_renamed_folder)
