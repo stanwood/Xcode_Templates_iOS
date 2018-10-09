@@ -171,12 +171,6 @@ module Stanwood
       File.open(tests_path, "w") { |file| file.puts tests }
     end
 
-    # def rename_template_files
-    #   FileUtils.mv "POD_README.md", "README.md"
-    #   FileUtils.mv "POD_LICENSE", "LICENSE"
-    #   FileUtils.mv "NAME.podspec", "#{pod_name}.podspec"
-    # end
-
     def rename_classes_folder
       FileUtils.mv "Pod", @pod_name
     end

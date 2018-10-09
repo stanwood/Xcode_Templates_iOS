@@ -26,7 +26,7 @@ class Coordinator: Coordinating {
     }
     
     func configureRootView() {
-        // TODO:
+        // TODO if needed:
         // 1. Configure a TabBarController
         // 2. Configure a NavigationController if needed
         
