@@ -32,8 +32,6 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		6C6F0C3A216C8A0C008EF82E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F0C39216C8A0C008EF82E /* String+Extension.swift */; };
-		6C6F0C3C216CAD75008EF82E /* Firebase-Default-Values-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F0C3B216CAD75008EF82E /* Firebase-Default-Values-Debug.plist */; };
-		6C6F0C3E216CAD8B008EF82E /* Firebase-Default-Values-Stage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C6F0C3D216CAD8B008EF82E /* Firebase-Default-Values-Stage.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +75,6 @@
 		607FACE51AFB9204008FA782 /* PROJECT_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECT_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C6F0C39216C8A0C008EF82E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		6C6F0C3B216CAD75008EF82E /* Firebase-Default-Values-Debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Firebase-Default-Values-Debug.plist"; sourceTree = "<group>"; };
-		6C6F0C3D216CAD8B008EF82E /* Firebase-Default-Values-Stage.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Firebase-Default-Values-Stage.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,9 +197,7 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
 				13901D6D216BFA5D005D9873 /* Firebase-Default-Values.plist */,
-				6C6F0C3B216CAD75008EF82E /* Firebase-Default-Values-Debug.plist */,
 				13901D6F216C0075005D9873 /* PROJECT-Bridging-Header.h */,
-				6C6F0C3D216CAD8B008EF82E /* Firebase-Default-Values-Stage.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -342,11 +336,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C6F0C3C216CAD75008EF82E /* Firebase-Default-Values-Debug.plist in Resources */,
 				13901D5B216BF67B005D9873 /* MainViewController.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				6C6F0C3E216CAD8B008EF82E /* Firebase-Default-Values-Stage.plist in Resources */,
 				13901D6E216BFA5D005D9873 /* Firebase-Default-Values.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
