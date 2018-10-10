@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
 
 require 'taltest'
+
 puts Stanwood.hi(ARGV[0])
