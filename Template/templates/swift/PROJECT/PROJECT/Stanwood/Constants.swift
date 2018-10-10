@@ -15,4 +15,11 @@ class Constants {
         
         static let defaults = "Firebase-Default-Values"
     }
+    
+    struct Translations {
+        private init () {}
+        
+        /// Add you translations here
+        /// Note: Follow our convensions
+    }
 }
