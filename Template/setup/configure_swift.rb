@@ -67,7 +67,7 @@ module Stanwood
           configurator.add_pod_to_podfile "'FontAwesome.swift'"
       end
 
-      add_image_cache = configurator.ask_with_answers("Would you like to add SDWebImage || Kingficher? Choose 1 for SDWebImage and 2 for Kingfisher", ["1", "2"]).to_sym
+      add_image_cache = configurator.ask_with_answers("Would you like to add SDWebImage || Kingfisher? Choose 1 for SDWebImage and 2 for Kingfisher", ["1", "2"]).to_sym
       case add_image_cache
       when :"1"
         configurator.add_pod_to_podfile "'SDWebImage'"
