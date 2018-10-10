@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="Sf8-0k-iHG">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="6JY-wC-gpp" customClass="MainViewController" customModule="PROJECT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ywu-gT-m6t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to PROJECT! Let's start this awesome new ORGANISATION project... 🎉🎉🎉" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRX-ec-kwF">
+                                <rect key="frame" x="20" y="303" width="335" height="61"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ODG-Sk-nvn" firstAttribute="trailing" secondItem="GRX-ec-kwF" secondAttribute="trailing" constant="20" id="9jU-29-Vr1"/>
+                            <constraint firstItem="GRX-ec-kwF" firstAttribute="leading" secondItem="ODG-Sk-nvn" secondAttribute="leading" constant="20" id="SwF-Xi-v3E"/>
+                            <constraint firstItem="GRX-ec-kwF" firstAttribute="centerY" secondItem="Ywu-gT-m6t" secondAttribute="centerY" id="csc-WW-Gfl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ODG-Sk-nvn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y3d-JN-ISV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="-4"/>
+        </scene>
+    </scenes>
+</document>
