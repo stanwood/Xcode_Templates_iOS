@@ -23,24 +23,19 @@ class ___VARIABLE_productName___ViewController: UIViewController, SourceTypePres
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCollectionView()
         presenter.viewDidLoad()
-    }
-    
-    private func setupCollectionView() {
-        
-        delegate = ___VARIABLE_productName___Delegate(dataType: Stanwood.Elements<Item>(items: []))
-        dataSource = ___VARIABLE_productName___DataSource(dataType: Stanwood.Elements<Item>(items: []))
-        delegate.presenter = presenter
-        dataSource.presenter = presenter
-        
-        collectionView.delegate = delegate
-        collectionView.dataSource = dataSource
-        collectionView.reloadData()
-    }
-    
+    }    
 }
 
 extension ___VARIABLE_productName___ViewController: ___VARIABLE_productName___Viewable {
     
+    func setupCollectionView(dataType: DataType?) {
+        
+        delegate = ___VARIABLE_productName___Delegate(dataType: dataType)
+        dataSource = ___VARIABLE_productName___DataSource(dataType: dataType)
+        
+        collectionView.delegate = delegate
+        collectionView.dataSource = dataSource
+    }
+
 }
