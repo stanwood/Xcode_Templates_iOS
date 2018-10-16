@@ -1,7 +1,7 @@
 //___FILEHEADER___
 
 protocol ___VARIABLE_productName___Viewable: class {
-    
+    func setupCollectionView(dataType: DataType?)
 }
 
 class ___VARIABLE_productName___Presenter: Presentable {
@@ -29,7 +29,7 @@ class ___VARIABLE_productName___Presenter: Presentable {
     // MARK:- Functions
 
     func viewDidLoad() {
-    
+        // TODO: replace` nil` with data from paramaterable
+        viewable.setupCollectionView(dataType: nil)
     }
-
 }

@@ -23,21 +23,17 @@ class ___VARIABLE_productName___ViewController: UIViewController, SourceTypePres
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
         presenter.viewDidLoad()
-    }
-    
-    private func setupTableView() {
-        delegate = ___VARIABLE_productName___Delegate(dataType: Stanwood.Elements<Item>(items: []))
-        dataSource = ___VARIABLE_productName___DataSource(dataType: Stanwood.Elements<Item>(items: []))
-        delegate.presenter = presenter
-        dataSource.presenter = presenter
-        tableView.delegate = delegate
-        tableView.dataSource = dataSource
-        tableView.reloadData()
     }
 }
 
 extension ___VARIABLE_productName___ViewController: ___VARIABLE_productName___Viewable {
     
+    func setupTableView(dataType: DataType?) {
+        delegate = ___VARIABLE_productName___Delegate(dataType: dataType)
+        dataSource = ___VARIABLE_productName___DataSource(dataType: dataType)
+
+        tableView.delegate = delegate
+        tableView.dataSource = dataSource
+    }
 }
