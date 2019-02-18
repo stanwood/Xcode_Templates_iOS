@@ -11,7 +11,7 @@
 ## Module Template
 
 ```yml
-curl "https://raw.githubusercontent.com/stanwood/Xcode_Templates_iOS/master/Script/install.sh"
+curl "https://raw.githubusercontent.com/stanwood/Xcode_Templates_iOS/master/Script/install.sh" | sudo bash
 ```
 >Note: You will be asked to enter your password.
 
