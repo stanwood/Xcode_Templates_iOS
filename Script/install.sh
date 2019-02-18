@@ -8,7 +8,7 @@ echo "Removing existing Template folder"
 sudo rm -rf /Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File\ Templates/Source/Module.xctemplate
 
 echo "Installing..."
-mv /tmp/xcode_template/Module/Module.xctemplate "/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/"
+sudo mv /tmp/xcode_template/Module/Module.xctemplate "/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/"
 
 echo "Finishing installation"
 rm -rf /tmp/xcode_template
