@@ -3,11 +3,16 @@
 import UIKit
 
 class ___VARIABLE_productName___ViewController: UIViewController {
-    var presenter: ___VARIABLE_productName___Presenter!
+   
+    private var presenter: ___VARIABLE_productName___Presenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+    }
+    
+    func set(_ presenter: ___VARIABLE_productName___Presenter) {
+        self.presenter = presenter
     }
     
 }

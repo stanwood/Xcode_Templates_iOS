@@ -8,9 +8,9 @@ class ___VARIABLE_productName___Presenter: Presentable {
     
     // MARK:- Properties
     
-    unowned var viewable: ___VARIABLE_productName___Viewable
-    var actionable: ___VARIABLE_productName___Actionable
-    var parameterable: ___VARIABLE_productName___Parameterable
+    private weak var view: ___VARIABLE_productName___Viewable
+    var actions: ___VARIABLE_productName___Actionable
+    var parameters: ___VARIABLE_productName___Parameterable
     
     // MARK:- Typealias
     
@@ -19,10 +19,10 @@ class ___VARIABLE_productName___Presenter: Presentable {
     typealias Viewable = ___VARIABLE_productName___Viewable
     
     
-    required init(actionable: ___VARIABLE_productName___Actionable, parameterable: ___VARIABLE_productName___Parameterable, viewable: ___VARIABLE_productName___Viewable) {
-        self.viewable = viewable
-        self.actionable = actionable
-        self.parameterable = parameterable
+    required init(actions: ___VARIABLE_productName___Actionable, parameters: ___VARIABLE_productName___Parameterable, view: ___VARIABLE_productName___Viewable) {
+        self.view = view
+        self.actions = actions
+        self.parameters = parameters
     }
     
     func viewDidLoad() {

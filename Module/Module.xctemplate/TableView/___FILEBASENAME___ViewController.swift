@@ -6,7 +6,7 @@ class ___VARIABLE_productName___ViewController: UIViewController, SourceTypePres
 
     // MARK:- Properties
 
-    var presenter: ___VARIABLE_productName___Presenter!
+    private var presenter: ___VARIABLE_productName___Presenter!
     var dataSource: ___VARIABLE_productName___DataSource!
     var delegate: ___VARIABLE_productName___Delegate!
     
@@ -24,6 +24,10 @@ class ___VARIABLE_productName___ViewController: UIViewController, SourceTypePres
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+    }
+    
+    func set(_ presenter: ___VARIABLE_productName___Presenter) {
+        self.presenter = presenter
     }
 }
 
