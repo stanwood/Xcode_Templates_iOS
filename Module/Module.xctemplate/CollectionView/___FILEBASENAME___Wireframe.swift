@@ -7,7 +7,7 @@ class ___VARIABLE_productName___Wireframe {
     }
 
     static func prepare(_ viewController: ___VARIABLE_productName___ViewController, actions: ___VARIABLE_productName___Actionable, parameters: ___VARIABLE_productName___Parameterable) {
-    	let presenter =  ___VARIABLE_productName___Presenter(actions: actions, parameterable: parameters, view: viewController)
+    	let presenter =  ___VARIABLE_productName___Presenter(actions: actions, parameters: parameters, view: viewController)
         viewController.set(presenter)
     }
 }
