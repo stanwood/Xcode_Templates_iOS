@@ -12,12 +12,6 @@ class ___VARIABLE_productName___Presenter: Presentable {
     private var actions: ___VARIABLE_productName___Actionable
     private var parameters: ___VARIABLE_productName___Parameterable
     
-    // MARK:- Typealias
-    
-    typealias Actionable = ___VARIABLE_productName___Actionable
-    typealias Parameterable = ___VARIABLE_productName___Parameterable
-    typealias Viewable = ___VARIABLE_productName___Viewable
-    
     // MARK:- Initialiser
     
     required init(actions: ___VARIABLE_productName___Actionable, parameters: ___VARIABLE_productName___Parameterable, view: ___VARIABLE_productName___Viewable) {
