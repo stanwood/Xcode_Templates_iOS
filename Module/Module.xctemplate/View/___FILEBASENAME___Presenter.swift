@@ -12,8 +12,8 @@ class ___VARIABLE_productName___Presenter: Presentable {
     var actions: ___VARIABLE_productName___Actionable
     var parameters: ___VARIABLE_productName___Parameterable
     
-    // MARK:- Init
-    
+    // MARK:- Initialiser
+
     required init(actions: ___VARIABLE_productName___Actionable, parameters: ___VARIABLE_productName___Parameterable, view: ___VARIABLE_productName___Viewable) {
         self.view = view
         self.actions = actions
