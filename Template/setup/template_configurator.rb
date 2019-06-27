@@ -39,6 +39,13 @@ module Stanwood
       reinitialize_git_repo
 
       run_pod_install
+      system "ls"
+      system "mv ./#{project_name}/ ../"
+      system "ls"
+      system "mv #{project_name} .."
+      system "ls"
+      systsm "cd .."
+      system "ls"
 
       @message_bank.farewell_message
     end
