@@ -40,7 +40,9 @@ module Stanwood
 
       run_pod_install
 
-      `mv ./#{project_name}/ ../`
+      `cd ..`
+      `mv #{project_name} ..`
+      `cd ..`
 
       @message_bank.farewell_message
     end
