@@ -63,8 +63,8 @@ module Stanwood
       puts "\n Ace! you're ready to go!"
       puts " We will start you off by opening your project in Xcode"
 
-      project_name = @configurator.project_name
-      run_command "open '../#{project_name}/#{project_name}.xcworkspace'", "open '../#{project_name}/#{project_name}.xcworkspace'"
+      # project_name = @configurator.project_name
+      # run_command "open '../#{project_name}/#{project_name}.xcworkspace'", "open '../#{project_name}/#{project_name}.xcworkspace'"
     end
 
 
