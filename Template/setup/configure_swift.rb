@@ -31,7 +31,7 @@ module Stanwood
     end
 
     def add_pods
-      configurator.add_pod_to_podfile "'StanwoodAnalytics'"
+      configurator.add_pod_to_podfile "'StanwoodAnalytics', '1.1.8'"
       configurator.add_pod_to_podfile "'StanwoodCore'"
       configurator.add_pod_to_podfile "'StanwoodDebugger', :configurations => ['Debug']"
       configurator.add_pod_to_podfile "'StanwoodDialog'"
