@@ -31,23 +31,19 @@ module Stanwood
     end
 
     def add_pods
-      configurator.add_pod_to_podfile "'StanwoodAnalytics', '1.1.8'"
+      configurator.add_pod_to_podfile "'StanwoodAnalytics'"
       configurator.add_pod_to_podfile "'StanwoodCore'"
+      configurator.add_pod_to_podfile "'SourceModel'"
       configurator.add_pod_to_podfile "'StanwoodDebugger', :configurations => ['Debug']"
       configurator.add_pod_to_podfile "'StanwoodDialog'"
-      configurator.add_pod_to_podfile "'Firebase'"
       configurator.add_pod_to_podfile "'ReachabilitySwift'"
       configurator.add_pod_to_podfile "'MBProgressHUD'"
+      configurator.add_pod_to_podfile "'Moya'"
+      configurator.add_pod_to_podfile "'Firebase'"
       configurator.add_pod_to_podfile "'Firebase/Core'"
       configurator.add_pod_to_podfile "'Firebase/RemoteConfig'"
-
-      add_moya = configurator.ask_with_answers("Would you like to add Moya", ["Yes", "No"]).to_sym
-      case add_moya
-        when :yes
-          configurator.add_pod_to_podfile "'Moya'"
-      end
-
-
+      configurator.add_pod_to_podfile "'Firebase/Analytics'"
+      configurator.add_pod_to_podfile "'Firebase/Performance'"
 
       add_rm_store = configurator.ask_with_answers("Would you like to add RMStore to handle IAP", ["Yes", "No"]).to_sym
       case add_rm_store
@@ -59,12 +55,6 @@ module Stanwood
       case add_keyboard_manager
         when :yes
           configurator.add_pod_to_podfile "'IQKeyboardManagerSwift'"
-      end
-
-      add_font_awesome = configurator.ask_with_answers("Would you like to add FontAwesome.swift", ["Yes", "No"]).to_sym
-      case add_font_awesome
-        when :yes
-          configurator.add_pod_to_podfile "'FontAwesome.swift'"
       end
 
       add_image_cache = configurator.ask_with_answers("Would you like to add SDWebImage || Kingfisher? Choose 1 for SDWebImage and 2 for Kingfisher", ["1", "2"]).to_sym
