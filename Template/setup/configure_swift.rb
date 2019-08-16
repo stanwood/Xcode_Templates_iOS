@@ -39,6 +39,7 @@ module Stanwood
       configurator.add_pod_to_podfile "'ReachabilitySwift'"
       configurator.add_pod_to_podfile "'MBProgressHUD'"
       configurator.add_pod_to_podfile "'Moya'"
+      configurator.add_pod_to_podfile "'EGOCache'"
       configurator.add_pod_to_podfile "'Firebase'"
       configurator.add_pod_to_podfile "'Firebase/Core'"
       configurator.add_pod_to_podfile "'Firebase/RemoteConfig'"
