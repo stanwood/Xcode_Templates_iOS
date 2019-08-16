@@ -30,7 +30,7 @@ module Stanwood
       add_pods_to_podfile
 
       puts "Renaming classes folder..."
-      rename_classes_folder
+       rename_classes_folder
 
       puts "Ensuring carthage compatibility..."
       ensure_carthage_compatibility
@@ -41,7 +41,7 @@ module Stanwood
       run_pod_install
 
       system "mv ./#{project_name}/ ../"
-      
+
       @message_bank.farewell_message
     end
 
@@ -174,7 +174,7 @@ module Stanwood
     end
 
     def rename_classes_folder
-      FileUtils.mv "Pod", @project_name
+      FileUtils.mv "Scripts", @project_name
     end
 
     def reinitialize_git_repo
