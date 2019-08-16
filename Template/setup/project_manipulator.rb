@@ -24,8 +24,11 @@ module Stanwood
         "TODAYS_DATE" => @configurator.date,
         "TODAYS_YEAR" => @configurator.year,
         "PROJECT" => @configurator.project_name,
-        "KEY" => "#{@project_key}",
-        "ORGANISATION" => "#{@organisation}"
+        "KEY" => "#{@project_key}".downcase,
+        "ORGANISATION" => "#{@organisation}",
+        "Company Limited" => "#{@organisation}",
+        "RUNSCRIPT_PRJ_PLACEHOLDER" => "PROJECT_NAME",
+        "BUNDLE-ID" => "#{@organisation}".downcase.split(' ').first
       }
 
       puts "Replace internal project settings for: #{@project_key}"
