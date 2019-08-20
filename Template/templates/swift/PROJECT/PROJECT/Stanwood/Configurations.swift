@@ -3,7 +3,7 @@
 //  PROJECT
 //
 //  Created by PROJECT_OWNER on TODAYS_DATE.
-//  Copyright © 2018 ORGANISATION. All rights reserved.
+//  Copyright © 2019 ORGANISATION. All rights reserved.
 //
 
 import Foundation
@@ -13,8 +13,7 @@ class Configurations {
     
     enum FirebaseConfig: String {
         
-        // Remove
-        case `default`
+        case baseURL = "base_url"
         
         static var isRemoteConfigActivated: Bool = false
         
@@ -32,19 +31,34 @@ class Configurations {
         }
     }
     
-    static func fetchRemoteConfig() {
+    static func fetchRemoteConfig(_ completion: @escaping CompletionBlock) {
         RemoteConfig.remoteConfig().setDefaults(fromPlist: Constants.FirebaseConfig.defaults)
         RemoteConfig.remoteConfig().fetch { (status, error) in
             switch status {
             case .success:
-                RemoteConfig.remoteConfig().activateFetched()
+                RemoteConfig.remoteConfig().activate(completionHandler: { (error) in
+                    if let error = error as Error? {
+                        // track error
+                        TrackingManager.shared.track(error)
+                    }
+                    
+                    completion()
+                })
                 Configurations.FirebaseConfig.isRemoteConfigActivated = true
             case .failure, .noFetchYet, .throttled:
-                if let error = error as NSError? {
+                if let error = error as Error? {
                     // track error
+                    TrackingManager.shared.track(error)
                 }
+                
                 DispatchQueue.global(qos: .utility).async {
-                    Configurations.fetchRemoteConfig()
+                    Configurations.fetchRemoteConfig(completion)
+                }
+                
+            @unknown default:
+                
+                DispatchQueue.global(qos: .utility).async {
+                    Configurations.fetchRemoteConfig(completion)
                 }
             }
         }

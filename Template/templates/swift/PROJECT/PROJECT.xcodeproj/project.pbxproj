@@ -10,7 +10,6 @@
 		1321BAAD215C0E6900726E6B /* ReplaceMe_Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAAC215C0E6900726E6B /* ReplaceMe_Helpers.swift */; };
 		1321BAB3215C0F1A00726E6B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAB2215C0F1A00726E6B /* Networking.swift */; };
 		1321BAB5215C0F7B00726E6B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAB4215C0F7B00726E6B /* NetworkManager.swift */; };
-		1321BAB9215C11B500726E6B /* ReplaceMe_Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAB8215C11B500726E6B /* ReplaceMe_Services.swift */; };
 		1321BABC215C11D800726E6B /* ReplaceMe_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BABB215C11D800726E6B /* ReplaceMe_Model.swift */; };
 		13901D52216BF49E005D9873 /* PROJECTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13901D51216BF49E005D9873 /* PROJECTTests.swift */; };
 		13901D59216BF67B005D9873 /* MainActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13901D53216BF67B005D9873 /* MainActionable.swift */; };
@@ -31,6 +30,11 @@
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		6C226A80230C15CF00A0A029 /* TrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C226A7F230C15CF00A0A029 /* TrackingManager.swift */; };
+		6C226A83230C162C00A0A029 /* Firebase-Default-Values-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C226A82230C162C00A0A029 /* Firebase-Default-Values-Debug.plist */; };
+		6C226A85230C163800A0A029 /* Firebase-Default-Values-Stage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C226A84230C163800A0A029 /* Firebase-Default-Values-Stage.plist */; };
+		6C226A87230C168700A0A029 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C226A86230C168700A0A029 /* APIError.swift */; };
+		6C226A89230C16B600A0A029 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C226A88230C16B600A0A029 /* EndPoint.swift */; };
 		6C307A0F21AD446E00DF70F2 /* ReplaceMe_Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C307A0E21AD446E00DF70F2 /* ReplaceMe_Views.swift */; };
 		6C6F0C3A216C8A0C008EF82E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F0C39216C8A0C008EF82E /* String+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -49,7 +53,6 @@
 		1321BAAC215C0E6900726E6B /* ReplaceMe_Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMe_Helpers.swift; sourceTree = "<group>"; };
 		1321BAB2215C0F1A00726E6B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		1321BAB4215C0F7B00726E6B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		1321BAB8215C11B500726E6B /* ReplaceMe_Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMe_Services.swift; sourceTree = "<group>"; };
 		1321BABB215C11D800726E6B /* ReplaceMe_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMe_Model.swift; sourceTree = "<group>"; };
 		13901D51216BF49E005D9873 /* PROJECTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PROJECTTests.swift; sourceTree = "<group>"; };
 		13901D53216BF67B005D9873 /* MainActionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActionable.swift; sourceTree = "<group>"; };
@@ -75,6 +78,11 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* PROJECT_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECT_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C226A7F230C15CF00A0A029 /* TrackingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingManager.swift; sourceTree = "<group>"; };
+		6C226A82230C162C00A0A029 /* Firebase-Default-Values-Debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Firebase-Default-Values-Debug.plist"; sourceTree = "<group>"; };
+		6C226A84230C163800A0A029 /* Firebase-Default-Values-Stage.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Firebase-Default-Values-Stage.plist"; sourceTree = "<group>"; };
+		6C226A86230C168700A0A029 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		6C226A88230C16B600A0A029 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		6C307A0E21AD446E00DF70F2 /* ReplaceMe_Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMe_Views.swift; sourceTree = "<group>"; };
 		6C6F0C39216C8A0C008EF82E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +118,8 @@
 			children = (
 				1321BAB4215C0F7B00726E6B /* NetworkManager.swift */,
 				13901D6B216BF881005D9873 /* DataProvider.swift */,
+				6C226A86230C168700A0A029 /* APIError.swift */,
+				6C226A88230C16B600A0A029 /* EndPoint.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -164,7 +174,7 @@
 		1321BAB7215C109800726E6B /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				1321BAB8215C11B500726E6B /* ReplaceMe_Services.swift */,
+				6C226A81230C15D600A0A029 /* Tracking */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -198,7 +208,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
-				13901D6D216BFA5D005D9873 /* Firebase-Default-Values.plist */,
+				6C226A8A230C16E800A0A029 /* Firebase Defaults */,
 				13901D6F216C0075005D9873 /* PROJECT-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
@@ -252,6 +262,24 @@
 				607FACEA1AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C226A81230C15D600A0A029 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				6C226A7F230C15CF00A0A029 /* TrackingManager.swift */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		6C226A8A230C16E800A0A029 /* Firebase Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				13901D6D216BFA5D005D9873 /* Firebase-Default-Values.plist */,
+				6C226A82230C162C00A0A029 /* Firebase-Default-Values-Debug.plist */,
+				6C226A84230C163800A0A029 /* Firebase-Default-Values-Stage.plist */,
+			);
+			path = "Firebase Defaults";
 			sourceTree = "<group>";
 		};
 		6C307A0D21AD445800DF70F2 /* Views */ = {
@@ -347,9 +375,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C226A83230C162C00A0A029 /* Firebase-Default-Values-Debug.plist in Resources */,
 				13901D5B216BF67B005D9873 /* MainViewController.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				6C226A85230C163800A0A029 /* Firebase-Default-Values-Stage.plist in Resources */,
 				13901D6E216BFA5D005D9873 /* Firebase-Default-Values.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,10 +407,10 @@
 				6C307A0F21AD446E00DF70F2 /* ReplaceMe_Views.swift in Sources */,
 				13901D6A216BF866005D9873 /* Coordinator.swift in Sources */,
 				13901D62216BF6C8005D9873 /* Parameters.swift in Sources */,
+				6C226A80230C15CF00A0A029 /* TrackingManager.swift in Sources */,
 				6C6F0C3A216C8A0C008EF82E /* String+Extension.swift in Sources */,
 				1321BAB3215C0F1A00726E6B /* Networking.swift in Sources */,
 				1321BABC215C11D800726E6B /* ReplaceMe_Model.swift in Sources */,
-				1321BAB9215C11B500726E6B /* ReplaceMe_Services.swift in Sources */,
 				1321BAB5215C0F7B00726E6B /* NetworkManager.swift in Sources */,
 				13901D64216BF733005D9873 /* Configurations.swift in Sources */,
 				13901D5A216BF67B005D9873 /* MainPresenter.swift in Sources */,
@@ -388,7 +418,9 @@
 				13901D5D216BF67B005D9873 /* MainParameterable.swift in Sources */,
 				13DB5C46214AA3DF0014642E /* AppController.swift in Sources */,
 				13901D60216BF6B0005D9873 /* Actions.swift in Sources */,
+				6C226A89230C16B600A0A029 /* EndPoint.swift in Sources */,
 				13901D68216BF825005D9873 /* AppData.swift in Sources */,
+				6C226A87230C168700A0A029 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

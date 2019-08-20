@@ -2,4 +2,5 @@
 //  Use this file to import your target's public headers that you would like to expose to Swift.
 //
 
-#import <StanwoodCore/StanwoodCore-Swift.h>
+@import StanwoodCore;
+@import SourceModel;
