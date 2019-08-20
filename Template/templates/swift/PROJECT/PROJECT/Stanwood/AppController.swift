@@ -34,12 +34,20 @@ class AppController {
         coordinator.actions = actions
         coordinator.parameters = parameters
         
-        configureRootView()
+        presentSplashScreen()
         fetchConfigurations()
     }
     
     private func fetchConfigurations() {
-        actions.fetchRemoteConfig()
+        actions.fetchRemoteConfig { [unowned self] in
+            main {
+                self.coordinator.configureRootView()
+            }
+        }
+    }
+    
+    private func presentSplashScreen() {
+        coordinator.presentSplashScreen()
     }
     
     private func configureRootView() {

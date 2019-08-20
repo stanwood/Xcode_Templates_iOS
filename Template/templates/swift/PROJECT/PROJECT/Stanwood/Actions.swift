@@ -3,7 +3,7 @@
 //  PROJECT
 //
 //  Created by PROJECT_OWNER on TODAYS_DATE.
-//  Copyright © 2018 ORGANISATION. All rights reserved.
+//  Copyright © 2019 ORGANISATION. All rights reserved.
 //
 
 import Foundation
@@ -29,7 +29,7 @@ class Actions: Actionable {
         self.parameters = parameters
     }
     
-    func fetchRemoteConfig() {
-        Configurations.fetchRemoteConfig()
+    func fetchRemoteConfig(_ completion: @escaping CompletionBlock) {
+        Configurations.fetchRemoteConfig(completion)
     }
 }

@@ -3,7 +3,7 @@
 //  PROJECT
 //
 //  Created by PROJECT_OWNER on TODAYS_DATE.
-//  Copyright © 2018 ORGANISATION. All rights reserved.
+//  Copyright © 2019 ORGANISATION. All rights reserved.
 //
 
 import Foundation
@@ -34,5 +34,10 @@ class Coordinator: Coordinating {
         MainWireframe.prepare(viewController, with: actions, and: parameters)
         
         window.rootViewController = viewController
+    }
+    
+    func presentSplashScreen() {
+        // TODO
+        configureRootView()
     }
 }
