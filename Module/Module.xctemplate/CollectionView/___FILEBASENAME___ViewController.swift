@@ -48,7 +48,7 @@ extension ___VARIABLE_productName___ViewController: ___VARIABLE_productName___Vi
         dataSource = ___VARIABLE_productName___DataSource(modelCollection: modelCollection)
 
         // Uncomment when registering XIB files
-        // collectionView.register(cellTypes: UICollectionViewCell.self, AnotherUICollectionViewCell.self)
+        // collectionView.register(cellTypes: <#T##UICollectionViewCell#>.self, <#T##UICollectionViewCell#>.self)
 
         collectionView.delegate = delegate
         collectionView.dataSource = dataSource

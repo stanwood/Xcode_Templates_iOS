@@ -49,7 +49,7 @@ extension ___VARIABLE_productName___ViewController: ___VARIABLE_productName___Vi
         dataSource = ___VARIABLE_productName___DataSource(modelCollection: modelCollection)
 
         // Uncomment when registering XIB files
-        // tableView.register(cellTypes: UITableViewCell.self, AnotherUITableViewCell.self)
+        // tableView.register(cellTypes: <#T##UITableViewCell#>.self, <#T##UITableViewCell#>.self)
 
         tableView.delegate = delegate
         tableView.dataSource = dataSource
