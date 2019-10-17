@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1321B9C92358FEB000462166 /* Authenticating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321B9C82358FEB000462166 /* Authenticating.swift */; };
 		1321BAAD215C0E6900726E6B /* ReplaceMe_Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAAC215C0E6900726E6B /* ReplaceMe_Helpers.swift */; };
 		1321BAB3215C0F1A00726E6B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAB2215C0F1A00726E6B /* Networking.swift */; };
 		1321BAB5215C0F7B00726E6B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321BAB4215C0F7B00726E6B /* NetworkManager.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1321B9C82358FEB000462166 /* Authenticating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticating.swift; sourceTree = "<group>"; };
 		1321BAAC215C0E6900726E6B /* ReplaceMe_Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceMe_Helpers.swift; sourceTree = "<group>"; };
 		1321BAB2215C0F1A00726E6B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		1321BAB4215C0F7B00726E6B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				13901D6B216BF881005D9873 /* DataProvider.swift */,
 				6C226A86230C168700A0A029 /* APIError.swift */,
 				6C226A88230C16B600A0A029 /* EndPoint.swift */,
+				1321B9C82358FEB000462166 /* Authenticating.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -187,7 +190,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		13DB5C47214AA5640014642E /* Stanwood */ = {
+		13DB5C47214AA5640014642E /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				13901D5F216BF6B0005D9873 /* Actions.swift */,
@@ -199,7 +202,7 @@
 				13901D69216BF866005D9873 /* Coordinator.swift */,
 				13901D61216BF6C8005D9873 /* Parameters.swift */,
 			);
-			path = Stanwood;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		13DB5C4B214AA8700014642E /* Supporting Files */ = {
@@ -241,7 +244,7 @@
 				6C307A0D21AD445800DF70F2 /* Views */,
 				1321BABA215C11C300726E6B /* Model */,
 				1321BAA2215C0CF200726E6B /* Modules */,
-				13DB5C47214AA5640014642E /* Stanwood */,
+				13DB5C47214AA5640014642E /* Base */,
 				13DB5C4B214AA8700014642E /* Supporting Files */,
 			);
 			path = PROJECT;
@@ -413,6 +416,7 @@
 				1321BABC215C11D800726E6B /* ReplaceMe_Model.swift in Sources */,
 				1321BAB5215C0F7B00726E6B /* NetworkManager.swift in Sources */,
 				13901D64216BF733005D9873 /* Configurations.swift in Sources */,
+				1321B9C92358FEB000462166 /* Authenticating.swift in Sources */,
 				13901D5A216BF67B005D9873 /* MainPresenter.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				13901D5D216BF67B005D9873 /* MainParameterable.swift in Sources */,
