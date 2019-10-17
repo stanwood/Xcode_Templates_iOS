@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias CompletionBlock = () -> Void
+
 class Constants {
     
     struct FirebaseConfig {
@@ -29,5 +31,12 @@ class Constants {
         
         /// Add you translations here
         /// Note: Follow our convensions
+    }
+}
+
+extension Constants {
+    enum Result<T: Codable> {
+        case success(T)
+        case failure(APIErrorable)
     }
 }
