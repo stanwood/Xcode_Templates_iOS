@@ -48,7 +48,7 @@ class NetworkManager: Networking {
         if authenticator == nil {
             provider = MoyaProvider<EndPoint>()
         } else {
-            let requestClosure: MoyaProvider.RequestClosure = {
+            let requestClosure: MoyaProvider<EndPoint>.RequestClosure = {
                 [unowned self] (endpoint: Endpoint, done: @escaping MoyaProvider.RequestResultClosure) in
                 
                 guard let request = try? endpoint.urlRequest() else { return }
