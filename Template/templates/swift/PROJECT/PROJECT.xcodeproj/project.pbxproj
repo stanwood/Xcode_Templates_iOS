@@ -224,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD21AFB9204008FA782 /* PROJECT */,
-				607FACE81AFB9204008FA782 /* PROJECT_Tests */,
+				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -253,13 +253,13 @@
 			path = PROJECT;
 			sourceTree = "<group>";
 		};
-		607FACE81AFB9204008FA782 /* PROJECT_Tests */ = {
+		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				13901D51216BF49E005D9873 /* PROJECTTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
-			path = PROJECT_Tests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		607FACE91AFB9204008FA782 /* Supporting Files */ = {
