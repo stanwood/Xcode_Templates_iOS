@@ -31,10 +31,9 @@ module Stanwood
     end
 
     def add_pods
-      configurator.add_pod_to_podfile "'StanwoodAnalytics'"
       configurator.add_pod_to_podfile "'StanwoodCore'"
       configurator.add_pod_to_podfile "'SourceModel'"
-      configurator.add_pod_to_podfile "'StanwoodDebugger', :configurations => ['Debug']"
+      configurator.add_pod_to_podfile "'Harlow', :configurations => ['Debug']"
       configurator.add_pod_to_podfile "'StanwoodDialog'"
       configurator.add_pod_to_podfile "'ReachabilitySwift'"
       configurator.add_pod_to_podfile "'MBProgressHUD'"
